@@ -26,6 +26,8 @@ async function getAnything() {
   const client = await MongoClient.connect(extractStringEnvVar('ATLAS_URI'));
   const db = client.db();
 
+  console.log('recupere la collection');
+
   const svCollec = db.collection("sv_test_collection");
 
   //const result = await svCollec.insertOne({title:'un troisieme test',num:8899999});
