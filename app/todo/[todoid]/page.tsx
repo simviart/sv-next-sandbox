@@ -23,7 +23,7 @@ export default async function Page({ params }: { params: { todoid: number } }) {
     title:string
   } = await getOneTodo(todoid); 
 
-  console.log('dans le composant todo');
+  console.log('dans le composant todooooo');
 
 
   return <h1>{onetodo.title}</h1>;
