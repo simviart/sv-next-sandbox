@@ -8,8 +8,22 @@ async function getOneTodo() {
   return res.json();
 }
 
+function extractStringEnvVar(
+  key: keyof NodeJS.ProcessEnv,
+): string {
+  const value = process.env[key];
+
+  if (value === undefined) {
+      const message = `The environment variable "${key}" cannot be "undefined".`;
+
+      throw new Error(message);
+  }
+
+  return value;
+}
+
 async function getAnything() {
-  const client = await MongoClient.connect(process.env.ATLAS_URI);
+  const client = await MongoClient.connect(extractStringEnvVar('ATLAS_URI'));
   const db = client.db();
 
   const svCollec = db.collection("sv_test_collection");
