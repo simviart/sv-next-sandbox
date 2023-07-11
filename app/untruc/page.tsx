@@ -7,3 +7,4 @@ const Page: React.FC<{}> = (props) => {
   )
 }
 export default Page;
+
