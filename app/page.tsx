@@ -66,7 +66,7 @@ export default async function Page() {
       <li><Link href={`/todo/1`}>test</Link></li>
         {/* allTodos.map(todo => <li><Link href={`/todo/${todo}`}>{todo}</Link></li>) */}
       </ul>
-      {test.map((untest, index) => <div key={index}>{untest.title} avec le num {untest.num}</div>)}
+      {test.map((untest, index) => <div key={index}>{untest.title} avec le numero {untest.num}</div>)}
     </>
   );
 }
